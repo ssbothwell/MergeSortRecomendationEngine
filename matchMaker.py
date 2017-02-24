@@ -52,7 +52,7 @@ def rankMentors(mentee, mentorList):
 
     # Count inversions for mentors
     mentorInversions = [ [x[0].name, mergeSortInversions(x[1])[1]] for x in mentorIndexes ]
-    return mentorInversions
+    return sorted(mentorInversions, reverse=True)
 
 # Instantiate Mentee object
 mentee = Person('solomon')
